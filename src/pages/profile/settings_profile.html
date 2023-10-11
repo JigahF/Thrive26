@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#D4DDCC]">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edit Profile</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <header id="header" class="bg-[#2A3D19] flex justify-between px-8">
+        <div id="thriveLogo" class="inline-block w-14 h-14">
+          <img
+            src="/src/assets/profile_asset/Thrive logo.png"
+            alt="Thrive logo"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <ul class="flex space-x-6 pt-4 text-slate-100">
+            <li class="cursor-pointer">Home</li>
+            <li class="cursor-pointer">
+              <a href="https://about-us-swart.vercel.app/">About</a>
+            </li>
+            <li class="cursor-pointer">
+              <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+                >Therapy</a
+              >
+            </li>
+            <li class="cursor-pointer">
+              <a href="https://short-thrive-101.netlify.app/">Community</a>
+            </li>
+            <li class="cursor-pointer">
+              <a href="https://sign-up-thrive.vercel.app/">Sign up</a>
+            </li>
+            <li class="cursor-pointer">
+              <span class="searchIcon"
+                ><i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #ffffff"
+                ></i
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+    <section class="px-4 py-12 md:px-24">
+      <!-- --------------Main Area---------------- -->
+      <div class="block md:flex gap-32">
+        <div class="relative mb-4 pl-8 w-40">
+          <img
+            src="/src/assets/profile_asset/amaka.jpg"
+            alt=""
+            class="w-28 h-28 rounded-full object-cover"
+          />
+          <img
+            src="/src/assets/profile_asset/camera.png"
+            alt="camera"
+            class="w-12 h-12 absolute left-24 -bottom-4 md:bottom-8"
+          />
+        </div>
+        <div class="flex flex-col gap-3 hidden md:block">
+          <h3 class="mb-4"><strong>ABOUT ME</strong></h3>
+          <textarea
+            class="block w-96 rounded-sm shadow-md px-2 py-1 h-32"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <!-- -----------Input Section----------- -->
+        <div
+          class="flex flex-col py-12 gap-12 md:grid grid-cols-3 md:gap-8 md:items-center md:w-full"
+        >
+          <div class="flex flex-col gap-3">
+            <h3><strong>USERNAME</strong></h3>
+            <input
+              type="password"
+              id="password"
+              placeholder="Your Username"
+              class="block w-96 md:w-[80%] rounded-sm shadow-md px-2 py-1"
+            />
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h3><strong>AGE</strong></h3>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Age"
+              class="block w-96 md:w-[80%] rounded-sm shadow-md px-2 py-1"
+            />
+          </div>
+
+          <div class="flex flex-col gap-3 mr-8">
+            <h3><strong>EMAIL</strong></h3>
+            <input
+              type="password"
+              id="password"
+              placeholder="Your Email"
+              class="block w-96 md:w-[80%] rounded-sm shadow-md px-2 py-1"
+            />
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h3><strong>CITY</strong></h3>
+            <input
+              type="password"
+              id="password"
+              placeholder="City"
+              class="block w-96 md:w-[80%] rounded-sm shadow-md px-2 py-1"
+            />
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3><strong>STATE</strong></h3>
+            <input
+              type="password"
+              id="password"
+              placeholder="State"
+              class="block w-96 md:w-[80%] rounded-sm shadow-md px-2 py-1"
+            />
+          </div>
+          <div class="flex flex-col gap-3 md:hidden">
+            <h3><strong>ABOUT ME</strong></h3>
+            <textarea
+              class="block w-96 rounded-sm shadow-md px-2 py-1 h-32"
+            ></textarea>
+          </div>
+
+          <button
+            class="hidden md:block font-semibold text-center text-white bg-[#295700] rounded-md py-1 mt-8 w-[70%]"
+          >
+            SAVE
+          </button>
+        </div>
+        <div class="mt-8 flex md:hidden">
+          <button
+            class="block w-32 font-semibold text-center text-white bg-[#295700] py-1 rounded-md md:ml-64"
+          >
+            SAVE
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="w-full bg-[#2A3D19] text-slate-100 px-20 py-5 flex flex-col items-center"
+    >
+      <div class="w-full flex items-center justify-evenly mb-2">
+        <div>
+          <span class="text-2xl font-body_text font-medium">Thrive</span>
+          <ul>
+            <li class="font-body_text font-medium"><a href="#">About Us</a></li>
+            <li class="font-body_text font-medium">
+              <a href="https://help-and-support.vercel.app/">Contact Us</a>
+            </li>
+            <li class="font-body_text font-medium">
+              <a href="https://help-and-support.vercel.app/">Help & Support</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span class="text-xl font-body_text font-medium">Social</span>
+          <ul>
+            <li class="font-body_text font-medium">Facebook</li>
+            <li class="font-body_text font-medium">Instagram</li>
+            <li class="font-body_text font-medium">Twitter</li>
+          </ul>
+        </div>
+        <div>
+          <span class="text-2xl font-body_text font-medium">Services</span>
+          <ul>
+            <li class="font-body_text font-medium">
+              <a href="#">Resources</a>
+            </li>
+            <li class="font-body_text font-medium">
+              <a href="https://thrive-relaxation-pages-frames-1-23.vercel.app/"
+                >Relaxation</a
+              >
+            </li>
+            <li class="font-body_text font-medium">
+              <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+                >Therapy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex items-center justify-center font-body_text font-medium"
+        >
+          <input
+            class="p-1 rounded-l-sm"
+            type="text"
+            placeholder="Email Address"
+          />
+          <button
+            class="rounded-r-sm bg-button px-2 py-1.5 outline-none font-body_text font-semibold"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+      <div class="w-full flex relative items-end justify-center">
+        <span class="text-center text-sm font-body_text font-medium"
+          >copyright&copy; 2023 thrive.techtribe all right reserved.</span
+        >
+        <a class="absolute right-0 cursor-pointer" href="#hero">
+          <img src="/src/assets/profile_asset/triangle.png" alt="scroll up" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
