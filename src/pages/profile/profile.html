@@ -1,46 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <header id="header" class="bg-[#2A3D19] flex justify-between px-8">
-      <div id="thriveLogo" class="inline-block w-14 h-14">
-        <img
-          src="/src/assets/profile_asset/Thrive logo.png"
-          alt="Thrive logo"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <div>
-        <ul class="flex space-x-6 pt-4 text-slate-100">
-          <li class="cursor-pointer">Home</li>
-          <li class="cursor-pointer">
-            <a href="https://about-us-swart.vercel.app/">About</a>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body class="bg-[#D4DDCC]">
+      <header
+      class="bg-[#2A3D19] px-4 md:pr-0 py-0 flex justify-between items-center z-30 relative"
+      id="header">
+      <img
+        src="/src/assets/profile_asset/Thrive logo.png"
+        alt="logo"
+        class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+      />
+      <nav>
+        <div class="md:hidden cursor-pointer">
+          <img
+            src="/src/assets/profile_asset/hamburger.png"
+            alt="hamburger"
+            class="w-8 h-8 block"
+            id="openMenu"
+          />
+          <img
+            src="/src/assets/profile_asset/close-menu.png"
+            alt="close-menu"
+            class="w-8 h-8 hidden"
+            id="closeMenu"
+          />
+        </div>
+        <ul class="hidden md:flex text-slate-100">
+          <li>
+            <a
+              href="https://thrive-dun.vercel.app/"
+              class="block px-4 py-4 font-semibold"
+              >Home</a
+            >
           </li>
-          <li class="cursor-pointer">
-            <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+          <li>
+            <a
+              href="https://about-us-swart.vercel.app/"
+              class="block px-4 py-4 font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+              class="block px-4 py-4 font-semibold"
               >Therapy</a
             >
           </li>
-          <li class="cursor-pointer">
-            <a href="https://short-thrive-101.netlify.app/">Community</a>
+          <li>
+            <a href="communities.html" class="block px-4 py-4 font-semibold"
+              >Community</a
+            >
           </li>
-          <li class="cursor-pointer">
-            <a href="https://sign-up-thrive.vercel.app/">Sign up</a>
-          </li>
-          <li class="cursor-pointer">
-            <span class="searchIcon"
-              ><i
-                class="fa-solid fa-magnifying-glass"
-                style="color: #ffffff"
-              ></i
-            ></span>
+          <li>
+            <a
+              href="https://sign-up-thrive.vercel.app/"
+              class="block px-4 py-4 font-semibold"
+              >Sign Up</a
+            >
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
+    <ul
+    id="mobileMenu"
+    class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+  >
+    <li>
+      <a
+        href=""
+        class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://about-us-swart.vercel.app/"
+        class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+        >About</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+        class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+        >Therapy</a
+      >
+    </li>
+    <li>
+      <a
+        href="communities.html"
+        class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+        >Community</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://sign-up-thrive.vercel.app/"
+        class="block pt-4 text-center text-lg font-semibold"
+        >Sign Up</a
+      >
+    </li>
+  </ul>
 
 
     <section class="flex min-h-[80vh] md:min-h-[60vh]">
@@ -74,11 +175,13 @@
             />
             <div>
               <h1 class="text-xl font-bold md:hidden">I'M</h1>
-              <h1 class="text-xl font-bold md:hidden">AVATAR AMAKA</h1>
+              <h1 class="text-xl font-bold md:hidden"><span id="update-username">AVATAR AMAKA</span></h1>
             </div>
           </div>
           <h1 class="text-lg font-bold px-4 my-4">ABOUT ME</h1>
-          <p class="px-4 text-xs">
+          
+          <p class="px-4 text-xs"
+          id="update-about">
             I'm Amaka, a passionate HR Manager on a mission to balance the art
             of career, family, and the vibrant culture of Nigeria. With a
             Master's degree in HR Management, I'm steering the ship in the
@@ -88,25 +191,26 @@
           </p>
         </section>
 
-        <section class="">
-          <h1 class="text-xl font-bold px-4 hidden md:block">
+        <section>
+          <h1 class="text-xl font-bold px-4 hidden md:block" 
+          id="update-username">
             I'M AVATAR AMAKA
           </h1>
           <div class="flex gap-8 mb-2 px-4 mt-8 md:mt-4">
             <span class="w-12 font-semibold uppercase tex-xs">Age</span>
-            <span>25</span>
+            <span id="update-age">25</span>
           </div>
           <div class="flex gap-8 mb-2 px-4">
             <span class="w-12 font-semibold uppercase tex-xs">Email</span>
-            <span>Amaka@gmail.com</span>
+            <span id="update-email">Amaka@gmail.com</span>
           </div>
           <div class="flex gap-8 mb-2 px-4">
             <span class="w-12 font-semibold uppercase tex-xs">City</span>
-            <span>Lagos Island</span>
+            <span id="update-city">Lagos Island</span>
           </div>
           <div class="flex gap-8 mb-2 px-4">
             <span class="w-12 font-semibold uppercase tex-xs">State</span>
-            <span>Lagos</span>
+            <span id="update-state">Lagos</span>
           </div>
             <a href="settings_profile.html"><button
               class="bg-[#295700] text-white px-4 py-1/2 rounded-sm relative ml-20 mt-8 md:relative right-0 md:mt-16 md:ml-24"
@@ -118,79 +222,80 @@
       </section>
     </section>
 
-    <!-- <footer class="bg-green-700 flex px-4 py-4 justify-between">
-      <img src="images/wrong icon.jpg" alt="" class="w-4 h-4" />
-      <img src="images/wrong icon.jpg" alt="" class="w-4 h-4" />
-      <img src="images/wrong icon.jpg" alt="" class="w-4 h-4" />
-      <img src="images/wrong icon.jpg" alt="" class="w-4 h-4" />
-      <img src="images/wrong icon.jpg" alt="" class="w-4 h-4" />
-    </footer> -->
+  <!--  Footer  -->
 
-    <footer
-      class="w-full bg-[#2A3D19] text-slate-100 px-20 py-5 flex flex-col items-center"
-    >
-      <div class="w-full flex items-center justify-evenly mb-2">
-        <div>
-          <span class="text-2xl font-body_text font-medium">Thrive</span>
-          <ul>
-            <li class="font-body_text font-medium"><a href="#">About Us</a></li>
-            <li class="font-body_text font-medium">
-              <a href="https://help-and-support.vercel.app/">Contact Us</a>
-            </li>
-            <li class="font-body_text font-medium">
-              <a href="https://help-and-support.vercel.app/">Help & Support</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <span class="text-xl font-body_text font-medium">Social</span>
-          <ul>
-            <li class="font-body_text font-medium">Facebook</li>
-            <li class="font-body_text font-medium">Instagram</li>
-            <li class="font-body_text font-medium">Twitter</li>
-          </ul>
-        </div>
-        <div>
-          <span class="text-2xl font-body_text font-medium">Services</span>
-          <ul>
-            <li class="font-body_text font-medium">
-              <a href="#">Resources</a>
-            </li>
-            <li class="font-body_text font-medium">
-              <a href="https://thrive-relaxation-pages-frames-1-23.vercel.app/"
-                >Relaxation</a
-              >
-            </li>
-            <li class="font-body_text font-medium">
-              <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
-                >Therapy</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div
-          class="flex items-center justify-center font-body_text font-medium"
-        >
-          <input
-            class="p-1 rounded-l-sm"
-            type="text"
-            placeholder="Email Address"
-          />
-          <button
-            class="rounded-r-sm bg-button px-2 py-1.5 outline-none font-body_text font-semibold"
+  <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 relative">
+    <a href="#header"
+      ><img
+        src="/src/assets/profile_asset/triangle.png"
+        alt="triangle"
+        class="absolute bottom-8 right-4"
+    /></a>
+    <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
+      <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
+        <div class="text-white flex flex-col gap-2">
+          <h1 class="font-bold text-2xl mb-4">Thrive</h1>
+          <a href="https://about-us-swart.vercel.app/" class="font-semibold"
+            >About</a
           >
-            Subscribe
-          </button>
+          <a href="" class="font-semibold">Mood Track</a>
+          <a href="https://help-and-support.vercel.app/" class="font-semibold"
+            >Help & Support</a
+          >
+        </div>
+
+        <div class="text-white flex flex-col gap-2">
+          <h1 class="font-bold text-2xl mb-4">Social</h1>
+          <a href="" class="font-semibold">Facebook</a>
+          <a href="" class="font-semibold">Instagram</a>
+          <a href="" class="font-semibold">Twitter</a>
         </div>
       </div>
-      <div class="w-full flex relative items-end justify-center">
-        <span class="text-center text-sm font-body_text font-medium"
-          >copyright&copy; 2023 thrive.techtribe all right reserved.</span
+
+      <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
+        <h1 class="font-bold text-2xl mb-4">Services</h1>
+        <a
+          href="https://thrive-resources-article.vercel.app/
+        "
+          class="font-semibold"
+          >Resources</a
         >
-        <a class="absolute right-0 cursor-pointer" href="#hero">
-          <img src="/src/assets/profile_asset/triangle.png" alt="scroll up" />
-        </a>
+        <a
+          href="https://thrive-relaxation-pages-frames-1-23.vercel.app/"
+          class="font-semibold"
+          >Relaxation</a
+        >
+        <a
+          href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+          class="font-semibold"
+          >Therapy</a
+        >
       </div>
-    </footer>
+
+      <div
+        class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+      >
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
+        />
+        <button
+          class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm block w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+        >
+          Subscribe
+        </button>
+      </div>
+    </div>
+    <p class="text-center text-white mt-8 font-semibold">
+      copyright&copy; <span id="year"></span> thrive.techtribe all right
+      reserved
+    </p>
+  </footer>
+
+  <!-- End of Footer -->
+
+  <script src="header_and_footer.js"></script>
+  <script src="profile.js"></script>
   </body>
 </html>
