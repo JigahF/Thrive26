@@ -32,23 +32,41 @@ closeMenu.addEventListener("click", () => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
-//Comment section
-const text = document.getElementById('text');
+// Comment section
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const email = document.getElementById('email');
+const number = document.getElementById('number');
+const comment = document.getElementById('comment');
 
 function handleSubmit() {
-    console.log(text.value);
-
-    let message = text.value; 
-    console.log({mes: message});
-    if (message.length == 0) {
-        alert('Kindly Fill in a comment')
-        return 
+    // Validate form fields
+    if (fname.value.trim() === '' || lname.value.trim() === '' || email.value.trim() === '' || number.value.trim() === '' || comment.value.trim() === '') {
+        alert('Kindly fill out all the fields.');
+        return;
     }
-    localStorage.setItem('videoComment', JSON.stringify(message));
 
-    text.value = '';
+    // Create an object to store form data
+    const formData = {
+        firstName: fname.value.trim(),
+        lastName: lname.value.trim(),
+        email: email.value.trim(),
+        phoneNumber: number.value.trim(),
+        userComment: comment.value.trim()
+    };
 
-    console.log('Message submitted:', message);
+    // Store form data in local storage
+    localStorage.setItem('helpAndSupport', JSON.stringify(formData));
+
+    // Optionally, you can clear the form fields after submission
+    fname.value = '';
+    lname.value = '';
+    email.value = '';
+    number.value = '';
+    comment.value = '';
+
+    // Provide feedback to the user
     alert('Form submitted successfully!');
 }
+
 
