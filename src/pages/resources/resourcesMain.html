@@ -3,70 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premium Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .slide-in {
-          animation-name: slide-in;
-          animation-duration: 1s;
-          animation-fill-mode: forwards;
-        }
-
-        @keyframes slide-in {
-          from {
-            transform: translateY(-100%);
-          }
-
-          to {
-            transform: translateY(0%);
-          }
-        }
-
-        .slide-out {
-          animation-name: slide-out;
-          animation-duration: 1s;
-          animation-fill-mode: backwards;
-        }
-
-        @keyframes slide-out {
-          from {
-            transform: translateY(0%);
-          }
-
-          to {
-            transform: translateY(-100%);
-          }
-        }
-      }
-    </style>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <script
+      src="https://kit.fontawesome.com/b190f9a589.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Thrive Articles</title>
   </head>
-
-  <body class="bg-[#D4DDCC] scroll-smooth">
-    <!-- NAV-BAR -->
-    <header
+  <body class="bg-[#d4ddcc] font-sans text-[#152C00]">
+    <section>
+        <header
       class="bg-[#2A3D19] px-4 md:pr-0 py-0 flex justify-between items-center z-30 relative"
       id="header"
     >
       <img
-        src="/assets/premiunAsset/thrive-logo.png"
+        src="/src/assets/communitypage-assets/thrive-logo.png"
         alt="logo"
         class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
       />
       <nav>
         <div class="md:hidden cursor-pointer">
           <img
-            src="/assets/premiunAsset/hamburger.png"
+            src="/src/assets/communitypage-assets/hamburger.png"
             alt="hamburger"
             class="w-8 h-8 block"
             id="openMenu"
           />
           <img
-            src="/assets/premiunAsset/close-menu.png"
+            src="/src/assets/communitypage-assets/close-menu.png"
             alt="close-menu"
             class="w-8 h-8 hidden"
             id="closeMenu"
@@ -95,7 +59,7 @@
             >
           </li>
           <li>
-            <a href="communities.html" class="block px-4 py-4 font-semibold"
+            <a href="forum.html" class="block px-4 py-4 font-semibold"
               >Community</a
             >
           </li>
@@ -114,88 +78,99 @@
       class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
     >
       <li>
-        <a
-          href=""
-          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://about-us-swart.vercel.app/"
-          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
-          >About</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
-          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
-          >Therapy</a
-        >
-      </li>
-      <li>
-        <a
-          href="communities.html"
-          class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
-          >Community</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://sign-up-thrive.vercel.app/"
-          class="block pt-4 text-center text-lg font-semibold"
-          >Sign Up</a
-        >
-      </li>
-    </ul>
-
-    <!-- Premium Content Section -->
-    <section class="container mx-auto mt-8 p-4">
-      <h1 class="text-3xl font-semibold text-[#4D732A]">
-        Welcome to the Premium Dashboard
-      </h1>
-      <p class="mt-4 text-lg text-[#333]">
-        Unlock exclusive features and content with our premium plans.
-      </p>
-      <div class="mt-6 flex flex-col md:flex-row gap-6">
-        <!-- Full Premium Option -->
-        <div class="bg-white rounded-lg p-6 flex-1">
-          <h2 class="text-2xl font-semibold text-[#4D732A]">
-            Full Premium Subscription
-          </h2>
-          <p class="mt-4 text-lg text-[#333]">
-            Enjoy unlimited access to premium features with our full premium
-            plan.
-          </p>
-          <button
-            class="mt-4 bg-[#4D732A] text-white px-4 py-2 rounded hover:bg-[#385E20]"
-          >
-            Subscribe
-          </button>
-        </div>
-
-        <!-- Pay Per Session Option -->
-        <div class="bg-white rounded-lg p-6 flex-1">
-          <h2 class="text-2xl font-semibold text-[#4D732A]">Pay Per Session</h2>
-          <p class="mt-4 text-lg text-[#333]">
-            Pay for individual sessions as you go with our pay-per-session
-            option.
-          </p>
-          <button
-            class="mt-4 bg-[#4D732A] text-white px-4 py-2 rounded hover:bg-[#385E20]"
-          >
-            Book a Session
-          </button>
-        </div>
-      </div>
     </section>
-
-    <!--  Footer  -->
+    <div>
+      <h1
+        class="text-3xl text-[#295700] font-serif font-bold py-10 text-center pb-8"
+      >
+        RESOUCRCES
+      </h1>
+      <h5 class="text-3xl text-[#295700] font-serif font-bold text-center pb-8">
+        THRIVE... Your Source for Essential Resources
+      </h5>
+      <div class="grid gap-20 justify-items-center grid-cols-2 grid-rows-3 mt-8
+      mb-10 mx-10">
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 w-5/6"
+      >
+        <a href="/src/pages/resources/articleList.html" target="_blank" rel="noopener noreferrer">
+          <p class="text-lg">
+          EDUCATIONAL MATERIALS / ARTICLES
+          <span class="pl-8">
+            <i class="fa-solid fa-folder" style="color: #295700"></i>
+          </span>
+        </p>
+        </a>
+      </div>
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 w-5/6"
+      >
+      <a href="https://video-lemon-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <p class="text-lg">
+          VIDEOS
+          <span class="pl-8">
+            <i class="fa-solid fa-video" style="color: #295700"></i>
+          </span>
+        </p>
+      </a>
+        
+      </div>
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 w-5/6"
+      >
+      <a href="https://thrive-audiopages-1-4.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <p class="text-lg">
+          AUDIOS
+          <span class="pl-8">
+            <i class="fa-solid fa-headphones" style="color: #295700"></i>
+          </span>
+        </p>
+      </a>
+        
+      </div>
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 w-5/6"
+      >
+      <a href="https://thrive-relaxation-pages-frames-1-23.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <p class="text-lg">
+          RELAXATION
+          <span class="pl-8">
+            <img
+              class="display: inline w-5"
+              src="/src/assets/resourcesAssets/Heart.png"
+              alt="image of a relaxing heart"
+            />
+          </span>
+        </p>
+      </a>
+        
+      </div>
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 pb-14 w-5/6"
+      >
+        <p class="text-lg">
+          RIDDLES
+          <span class="pl-8">
+            <i class="fa-regular fa-circle-question" style="color: #205700"></i>
+            <!-- <i class="fa-solid fa-question" style="color: #205700"></i> -->
+          </span>
+        </p>
+      </div>
+      <div
+        class="bg-[#DCAE96] drop-shadow-xl text-center rounded-2xl pt-14 pb-14 w-5/6"
+      >
+        <p class="text-lg">
+          JOKES
+          <span class="pl-8">
+            <i class="fa-solid fa-face-laugh-beam" style="color: #295700"></i>
+          </span>
+        </p>
+      </div>
+    </div>
     <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 relative">
       <a href="#header"
         ><img
-          src="/assets/premiunAsset/triangle.png"
+          src="/src/assets/communitypage-assets/triangle.png"
           alt="triangle"
           class="absolute bottom-8 right-4"
       /></a>
@@ -247,7 +222,7 @@
             class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-full md:w-80 focus:outline-none"
           />
           <button
-            class="bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm block w-full md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+            class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-full md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
           >
             Subscribe
           </button>
