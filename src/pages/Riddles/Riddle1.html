@@ -4,60 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Video</title>
 </head>
 <body class="bg-[#D9D9D9]">
-    <!--Header-->
-    <header class="bg-[#2A3D19] px-4 md:pr-0 py-0 flex justify-between items-center z-30 relative" id="header">
-        <img src="images/thrive-logo.png" alt="logo"
-            class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]" />
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .slide-in {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-in {
+            from {
+              transform: translateY(-100%);
+            }
+  
+            to {
+              transform: translateY(0%);
+            }
+          }
+  
+          .slide-out {
+            animation-name: slide-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+  
+          @keyframes slide-out {
+            from {
+              transform: translateY(0%);
+            }
+  
+            to {
+              transform: translateY(-100%);
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Live Header -->
+  
+      <header
+        class="bg-[#2A3D19] px-4 py-0 flex justify-between items-center z-30 relative"
+        id="header"
+      >
+        <img
+          src="/src/assets/aboutAsset/Thrive logo.png"
+          alt="logo"
+          class="w-40 h-20 object-fit -translate-y-[5px] -translate-x-[2.5rem]"
+        />
         <nav>
-            <div class="md:hidden cursor-pointer">
-                <img src="images/hamburger.png" alt="hamburger" class="w-8 h-8 block" id="openMenu" />
-                <img src="images/close-menu.png" alt="close-menu" class="w-8 h-8 hidden" id="closeMenu" />
-            </div>
-            <ul class="hidden md:flex text-slate-100">
-                <li>
-                    <a href="https://thrive-dun.vercel.app/" class="block px-4 py-4 font-semibold">Home</a>
-                </li>
-                <li>
-                    <a href="https://about-us-swart.vercel.app/" class="block px-4 py-4 font-semibold">About</a>
-                </li>
-                <li>
-                    <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
-                        class="block px-4 py-4 font-semibold">Therapy</a>
-                </li>
-                <li>
-                    <a href="communities.html" class="block px-4 py-4 font-semibold">Community</a>
-                </li>
-                <li>
-                    <a href="https://sign-up-thrive.vercel.app/" class="block px-4 py-4 font-semibold">Sign Up</a>
-                </li>
-            </ul>
+          <div class="md:hidden cursor-pointer">
+            <img
+              src="/src/assets/communitypage-assets/hamburger.png"
+              alt="hamburger"
+              class="w-8 h-8 block"
+              id="openMenu"
+            />
+            <img
+              src="/src/assets/communitypage-assets/close-menu.png"
+              alt="close-menu"
+              class="w-8 h-8 hidden"
+              id="closeMenu"
+            />
+          </div>
+          <ul class="hidden md:flex text-slate-100">
+            <li>
+              <a href="/src/index.html" class="block px-4 py-4 font-semibold">Home</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/about.html"
+                class="block px-4 py-4 font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/mainTherapyPage.html"
+                class="block px-4 py-4 font-semibold"
+                >Therapy</a
+              >
+            </li>
+            <li>
+              <a href="/src/pages/community/community.html" class="block px-4 py-4 font-semibold">Community</a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/signup.html"
+                class="block px-4 py-4 font-semibold"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
         </nav>
-    </header>
-    <ul id="mobileMenu"
-        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20">
+      </header>
+      <ul
+        id="mobileMenu"
+        class="bg-gray-50 text-[#2A3D19] py-4 transform -translate-y-[100%] left-0 w-full absolute hidden z-20"
+      >
         <li>
-            <a href="" class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Home</a>
+          <a
+            href="/src/index.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Home</a
+          >
         </li>
         <li>
-            <a href="https://about-us-swart.vercel.app/"
-                class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">About</a>
+          <a
+            href="/src/pages/about.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >About</a
+          >
         </li>
         <li>
-            <a href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
-                class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Therapy</a>
+          <a
+            href="/src/pages/mainTherapyPage.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Therapy</a
+          >
         </li>
         <li>
-            <a href="communities.html"
-                class="block py-4 text-center text-lg font-semibold border-b border-[#fff]">Community</a>
+          <a
+            href="/src/pages/community/community.html"
+            class="block py-4 text-center text-lg font-semibold border-b border-[#fff]"
+            >Community</a
+          >
         </li>
         <li>
-            <a href="https://sign-up-thrive.vercel.app/" class="block pt-4 text-center text-lg font-semibold">Sign
-                Up</a>
+          <a
+            href="/src/pages/signup.html"
+            class="block pt-4 text-center text-lg font-semibold"
+            >Sign Up</a
+          >
         </li>
-    </ul>
+      </ul>
+
+    <!-- End of Live Header -->
      <!--Main Content-->
      <section class="container mx-auto">
          <div class="grid grid-rows-1  justify-center md:grid">

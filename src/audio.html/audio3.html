@@ -192,22 +192,23 @@
 
   <!--  Footer  -->
 
-  <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 relative">
+  <footer class="bg-[#2A3D19] py-8 px-20 md:px-8 mt-8 md:mt-0 relative">
     <a href="#header"
       ><img
-        src="./header_and_footer_images/triangle.png"
+        src="/src/assets/aboutAsset/Vector.png"
         alt="triangle"
         class="absolute bottom-8 right-4"
     /></a>
+
     <div class="flex flex-col md:flex-row md:justify-evenly md:gap-6 mt-8">
       <div class="flex gap-4 justify-between md:justify-evenly md:w-[40%]">
         <div class="text-white flex flex-col gap-2">
           <h1 class="font-bold text-2xl mb-4">Thrive</h1>
-          <a href="https://about-us-swart.vercel.app/" class="font-semibold"
+          <a href="/src/pages/about.html" class="font-semibold"
             >About</a
           >
           <a href="" class="font-semibold">Mood Track</a>
-          <a href="https://help-and-support.vercel.app/" class="font-semibold"
+          <a href="/src/pages/Help-Support-Page/support.html" class="font-semibold"
             >Help & Support</a
           >
         </div>
@@ -223,41 +224,48 @@
       <div class="text-white flex flex-col gap-2 mt-12 md:mt-0">
         <h1 class="font-bold text-2xl mb-4">Services</h1>
         <a
-          href="https://thrive-resources-article.vercel.app/
-        "
+          href="/src/pages/resources/resourcesMain.html"
           class="font-semibold"
           >Resources</a
         >
         <a
-          href="https://thrive-relaxation-pages-frames-1-23.vercel.app/"
+          href="/src/pages/Relaxation/Relaxation8/relaxation8.html"
           class="font-semibold"
           >Relaxation</a
         >
         <a
-          href="https://my-tiidelab-repo-ge9z-tijesurejoice.vercel.app/"
+          href="/src/pages/mainTherapyPage.html"
           class="font-semibold"
           >Therapy</a
         >
       </div>
 
-      <div class="mt-8 flex flex-col gap-2 md:flex-row md:gap-0 md:self-end">
+      <div
+        class="flex flex-col md:flex-row md:gap-0 gap-2 justify-stretch mt-6 self-end"
+      >
         <input
           type="email"
           placeholder="Email Address"
-          class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-full md:w-80 focus:outline-none"
+          class="px-2 py-1 md:py-2 rounded-sm md:rounded-tr-none md:rounded-br-none block w-80 focus:outline-none"
         />
         <button
-          class="bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm block w-full md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
+          class="block bg-white md:bg-green-400 md:rounded-tl-none md:rounded-bl-none px-2 py-1 rounded-sm w-80 md:w-40 text-semibold text-[#2A3D19] font-bold hover:bg-green-300"
         >
           Subscribe
         </button>
       </div>
     </div>
+
     <p class="text-center text-white mt-8 font-semibold">
       copyright&copy; <span id="year"></span> thrive.techtribe all right
       reserved
     </p>
   </footer>
+
+  <!-- End of Footer -->
+
+  <script src="main.js"></script>
+  <script src="/src/pages/community/headerandfooter.js"></script>
 
   <!-- End of Footer -->
 
