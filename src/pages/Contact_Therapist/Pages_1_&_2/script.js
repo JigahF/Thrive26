@@ -31,15 +31,12 @@ closeMenu.addEventListener("click", () => {
 //Dynamaic Year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-
-
 // OVERLAY/POPUP
-const therapistTab = document.getElementById('therapistMenu')
-const wajudTherapistTab = document.getElementById('wajudTherapist')
-const chatOptions = document.getElementById('chatPopup')
+const therapistTab = document.getElementById("therapistMenu");
+const wajudTherapistTab = document.getElementById("wajudTherapist");
+const chatOptions = document.getElementById("chatPopup");
 
-
-wajudTherapistTab.addEventListener('click', () => {
-    therapistTab.style.opacity ='0.5'
-    chatOptions.style.display = 'block'
-})
+wajudTherapistTab.addEventListener("click", () => {
+  therapistTab.style.opacity = "0.5";
+  chatOptions.style.display = "block";
+});
